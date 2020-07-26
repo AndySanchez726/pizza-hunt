@@ -8,7 +8,7 @@ const pizzaController = {
           path: 'comments',
           select: '__v'
       })
-      .select('__v')
+      .select('-__v')
       .sort({ _id: -1 })
       .then(dbPizzaData => res.json(dbPizzaData))
       .catch(err => {
